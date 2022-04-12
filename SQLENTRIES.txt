@@ -1,0 +1,173 @@
+insert into  users (USER_ID,PASSWORD,USER_LEVEL) values ('aamodrao@gmail.com','aamod1','Admin');
+
+
+insert into doctor_info(name,uid,sex,blood_group,dob,contact_num,email_id,department,dept_no,qualifications,marital_status) values
+('Aamod Rao',123456789012,'M','B(+)','1971-09-09',9413835460,'aamodrao@gmail.com','Physician',1,'MBBS','Married'),
+('Sanjay Borude',234567890123,'M','B(+)','1972-09-08',9876543210,'sanjayborude@gmail.com','Physician',1,'MBBS','Unmarried'),
+('Lalit Panchal',345678901234,'M','AB(+)','1980-06-12',9928944890,'lalitpanchal@gmail.com','Orthopedician',2,'MBBS','Divorcee'),
+('Prashan Gedam',837402370270,'M','O(+)','1976-11-25',9727305555,'prashangedam@gmail.com','Orthopedician',2,'MBBS','Married'),
+('Atul Bhaskar',387408403398,'M','B(+)','1975-09-28',7627006100,'atulbhaskar@gmail.com','Cardiologist',3,'MBBS','Married');
+
+insert into doctor_info(name,uid,sex,blood_group,dob,contact_num,email_id,department,dept_no,qualifications,marital_status) values
+('Viraj Tambwekar',894703297478,'M','B(-)','1973-09-07',7728944890,'virajt@gmail.com','Cardiologist',3,'MBBS','Married'),
+('Harish Pathak',998461846936,'M','O(+)','1982-02-08',9413835000,'harishp@gmail.com','Neurologist',4,'MBBS','Married'),
+('Hemant Bhandari',847084703847,'M','O(+)','1971-09-02',9928944555,'hemantb@gmail.com','Neurologist',4,'MBBS','Married'),
+('Ashni Choksey',3092952983746,'F','B(+)','1977-09-03',8989006100,'ashnic@gmail.com','Opthalmologist',5,'MBBS','Married'),
+('Sonal Tambwekar',847028752048,'F','AB(+)','1980-04-09',9988776600,'sonalt@gmail.com','Opthalmologist',5,'MBBS','Unmarried');
+
+insert into doctor_info(name,uid,sex,blood_group,dob,contact_num,email_id,department,dept_no,qualifications,marital_status) values
+('Kapil Agarwal',3284702834780,'M','O(-)','1972-09-08',9386329324,'kapila@gmail.com','Gynaecologist',6,'MBBS','Divorcee'),
+('Anuja Desai',487130743534,'F','B(-)','1982-09-22',9837827320,'anujad@gmail.com','Gynaecologist',6,'MBBS','Unmarried'),
+('Dilip Nadkarni',830387025029,'M','O(-)','1973-09-23',9982387287,'dilipn@gmail.com','Pediatrician',7,'MBBS','Married');
+
+
+insert into wards (ward_no,type,department,no_of_beds,avail_beds) values
+('w1','General','Physician',10,10),
+('w2','Cottage','Physician',4,4),
+('w3','ICU','Physician',1,1),
+('w4','General','Orthopedician',10,10),
+('w5','Cottage','Orthopedician',4,4),
+('w6','ICU','Orthopedician',1,1);
+
+insert into wards (ward_no,type,department,no_of_beds,avail_beds) values
+('w7','General','Cardiologist',10,10),
+('w8','Cottage','Cardiologist',4,4),
+('w9','ICU','Cardiologist',1,1),
+('w10','General','Neurologist',10,10),
+('w11','Cottage','Neurologist',4,4),
+('w12','ICU','Neurologist',1,1);
+
+insert into wards (ward_no,type,department,no_of_beds,avail_beds) values
+('w13','General','Opthalmologist',10,10),
+('w14','Cottage','Opthalmologist',4,4),
+('w15','ICU','Opthalmologist',1,1)
+('w16','General','Gynaecologist',10,10),
+('w17','Cottage','Gynaecologist',4,4),
+('w18','ICU','Gynaecologist',1,1);
+
+insert into wards (ward_no,type,department,no_of_beds,avail_beds) values
+('w19','General','Pediatrician',10,10),
+('w20','Cottage','Pediatrician',4,4),
+('w21','ICU','Pediatrician',1,1);
+
+insert into registered_patients (PNAME,SEX,UID,DOB,BloodGroup,ContactNo,Address,Previous_Medical_Problems,GuardianName,GuardianRelation,GuardianContactNo) values
+('Maahira Singh','F',73409740394793,'1990-09-09','B(+)',9289892030,'Paota','High Blood Pressure','Megha Singh','Mother',9872377392);
+
+
+
+
+
+
+
+create table w1(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w2(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w3(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w4(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w5(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w6(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w7(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w8(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w9(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w10(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w11(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w12(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w13(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w14(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w15(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w16(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w17(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w18(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w19(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w20(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+create table w21(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+insert into w1 (Bed_num) values ('B1'),('B2'),('B3'),('B4'),('B5'),('B6'),('B7'),('B8'),('B9'),('B10');
+insert into w2 (Bed_num) values ('B1'),('B2'),('B3'),('B4');
+insert into w3 (Bed_num) values ('B1');
+insert into w4 (Bed_num) values ('B1'),('B2'),('B3'),('B4'),('B5'),('B6'),('B7'),('B8'),('B9'),('B10');
+insert into w5 (Bed_num) values ('B1'),('B2'),('B3'),('B4');
+insert into w6 (Bed_num) values ('B1');
+insert into w7 (Bed_num) values ('B1'),('B2'),('B3'),('B4'),('B5'),('B6'),('B7'),('B8'),('B9'),('B10');
+insert into w8 (Bed_num) values ('B1'),('B2'),('B3'),('B4');
+insert into w9 (Bed_num) values ('B1');
+insert into w10 (Bed_num) values ('B1'),('B2'),('B3'),('B4'),('B5'),('B6'),('B7'),('B8'),('B9'),('B10');
+insert into w11 (Bed_num) values ('B1'),('B2'),('B3'),('B4');
+insert into w12 (Bed_num) values ('B1');
+insert into w13 (Bed_num) values ('B1'),('B2'),('B3'),('B4'),('B5'),('B6'),('B7'),('B8'),('B9'),('B10');
+insert into w14 (Bed_num) values ('B1'),('B2'),('B3'),('B4');
+insert into w15 (Bed_num) values ('B1');
+insert into w16 (Bed_num) values ('B1'),('B2'),('B3'),('B4'),('B5'),('B6'),('B7'),('B8'),('B9'),('B10');
+insert into w17 (Bed_num) values ('B1'),('B2'),('B3'),('B4');
+insert into w18 (Bed_num) values ('B1');
+insert into w19 (Bed_num) values ('B1'),('B2'),('B3'),('B4'),('B5'),('B6'),('B7'),('B8'),('B9'),('B10');
+insert into w20 (Bed_num) values ('B1'),('B2'),('B3'),('B4');
+insert into w21 (Bed_num) values ('B1');
+
+
+
+
+
+
+

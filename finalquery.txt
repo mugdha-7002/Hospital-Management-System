@@ -1,0 +1,108 @@
+create database lif_line_hospital;
+use lif_line_hospital;
+
+create table users(
+USER_NO bigint not null primary key auto_increment,
+USER_ID char(50) not null unique,
+PASSWORD char(50) not null unique,
+USER_LEVEL char(20) not null);
+
+
+
+create table REGISTERED_PATIENTS
+(RegID bigint not null primary key auto_increment,
+PNAME varchar(30) not null,
+SEX char(3) not null,
+UID bigint,
+DOB date not nulL,
+BloodGroup char(7) not null,
+ContactNo bigint not null,
+Address char(50) not null,
+Previous_Medical_Problems varchar(100),
+GuardianName varchar(20),
+GuardianRelation varchar(15),
+GuardianContactNo char(13),
+InsuranceName varchar(100),
+CardNo bigint,
+CardHoldersName varchar(40),
+ValidFrom date,
+ValidityDuration varchar(10),
+AmountCovered int,
+DiseasesCovered varchar(100));
+
+
+
+create table APPOINTMENTS
+(APP_ID bigint not null primary key auto_increment,
+RegID bigint not null references REGISTERED_PATIENTS(RegID),
+APP_NUM bigint not null,
+PNAME varchar(100) not null,
+APP_DATE date not null,
+MED_PROBLEM varchar(50) not null,
+INVESTIGATING_DOCTOR_NAME varchar(30) not null,
+DEPARTMENT varchar(40) not null,
+DEPT_NO int not null,
+DOC_ID bigint not null
+);
+
+
+
+create table DOCTOR_INFO
+(DOC_ID bigint not null primary key auto_increment,
+NAME varchar(60) not null,
+UID bigint not null,
+SEX char(3) not null,
+BLOOD_GROUP varchar(6) not null,
+DOB date not null,
+CONTACT_NUM bigint not null,
+EMAIL_ID varchar(50),
+DEPARTMENT varchar(40) not null,
+DEPT_NO int not null,
+QUALIFICATIONS varchar(100) not null,
+MARITAL_STATUS varchar(20) not null);
+
+
+create table PATIENTS_ADM_DIS
+(AdmID bigint not null primary key auto_increment,
+RegID bigint not null references REGISTERED_PATIENTS(RegID),
+REASON_OF_ADMISSION varchar(30) not null,
+DOCTOR_IN_VIGIL varchar(40) not null,
+DATE_OF_ADMISSION date not null,
+DATE_OF_DISCHARGE date,
+WARD_NO varchar(2) not null,
+BED_NO char(5) not null);
+
+
+create table WARDS
+(Ward_No varchar(5) not null,
+Type varchar(15) not null,
+Department varchar(20) not null,
+No_Of_Beds int not null,
+Avail_Beds int);
+
+
+
+create table DIAGNOSIS_INFORMATION
+(DiagnosisID bigint not null primary key auto_increment,
+RegID bigint not null references REGISTERED_PATIENTS(RegID),
+DOC_ID varchar(30) not null,
+PROBLEM_SUGGESTED varchar(40),
+TESTS_SUGGESTED varchar(40),
+MEDICINES_PRESCRIBED varchar(100),
+DIAGNOSIS_DATE date
+);
+     
+    
+create table w1(
+Bed_Num char(5) not null primary key,
+RegID int);
+
+
+
+
+
+
+
+
+
+
